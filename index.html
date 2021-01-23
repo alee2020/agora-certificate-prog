@@ -27,17 +27,28 @@
 
             <script>
                 function add() {
-                    var x = firstN + secondN;
+                    let x = parseInt(firstN.value) + parseInt(secondN.value);
                     console.log(x);
+                    return true;
                 }
                 function sub() {
-                    console.log(firstN-secondN);
+                    let x = parseInt(firstN.value) - parseInt(secondN.value);
+                    console.log(x);
+                    return true;
                 }
                 function mul() {
-                    console.log(firstN*secondN);
+                    let x = parseInt(firstN.value) * parseInt(secondN.value);
+                    console.log(x);
+                    return true;
                 }
                 function div() {
-                    console.log(firstN/secondN);
+                    if (secondN.value==0) {
+                        console.log("can't divide by zero");
+                        return true;
+                    }
+                    let x = parseInt(firstN.value) / parseInt(secondN.value);
+                    console.log(x);
+                    return true;
                 }
             </script> 
             </div>
